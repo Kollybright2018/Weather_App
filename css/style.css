@@ -1,0 +1,70 @@
+
+.inner-con{
+    background-image: url('../images/cloud.gif') !important;
+    background-position: cover;
+    background-repeat: no-repeat;
+    display: relative;
+    height: 500px;
+    width: 270px;
+    margin: auto;
+    align-items: center;
+}
+.app_name{
+    font-weight: 800;
+    font-family:cursive
+}
+/* h1, h4, p{
+position: absolute;
+} */
+
+.elements{
+    position: absolute;
+    top: 310px;
+    color: white;
+}
+.tc{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    color: white;
+}
+.input-group{
+    position: absolute;
+    top: 50;
+}
+
+.form-control{
+    width: 90% !important;
+}
+.form-group{
+    position: relative;
+    top: 12px;
+}
+.btn{
+    position: absolute;
+    top: 1px;
+    left: 162px;
+}
+.in{
+    position: absolute;
+    left: 7px;
+    color: wheat;
+    /* background: linear-gradient(360deg, #201717, transparent) !important; */
+}
+.form-control input::placeholder{
+    color: rgb(243, 31, 16) !important  ; 
+}
+.form-control input:focus{
+    color: white !important;
+    font-size: 14px;
+}
+.info{
+    padding: 4px 50px;
+    position: absolute;
+    bottom: -46px;
+     /* background: linear-gradient(360deg, #201717, transparent) !important; */
+     color: white;
+}
+.back{
+    background: linear-gradient(to bottom, #201717, transparent) !important;
+}
