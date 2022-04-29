@@ -16,23 +16,21 @@
             <div class="  mt-5 p-5 bg-inf" >
                <div class="inner-con p-4">
                 <h2 class="text-light app_name">Weather Map</h2>
-                <div class="elements">
-                    <span style="
-                    padding:0 40px;"><b><i class="fas fa-temperature-high"></i> 31 </b> </span>
-                    <span><b><i class="fas fa-cloud"></i> Cloudy </b></span>
-                     <h1></h1>
+                <div class="elements" id="elements">
+                    
+                   
                 <h4 id="cloud"> </h4>
                    </div>
 
                    <div class="form">
-                        <form action="" id="search-form">
-                         <div class="form-group">
-                             <input type="text" id="" placeholder="Search city here" class="form-control in">
-                             <button class="btn input-text" id="search_btn"> <i class="text-info fas fa-search"></i></button>
-                               
+                        <form action="" id="form_search">
+                         <div class="form-group"> 
+                             <input type="text" name="search" value="" id="search" placeholder="Search city here" class="form-control in">
+                             <button type="submit" class="btn input-text" id="search_btn"> <i class="text-info fas fa-search"></i></button>
+                              <p id="error"> </p>
                              <div class="tc">
-                             <h5 id="city"><i class="fas fa-map-marker-alt"> Iseyin - NG</i></h4>
-                             <h5 id="time"> <i class="fas fa-clock"></i> Todays, 09:00  </h4>
+                             <h5 id="city"></h4>
+                             <!-- <h5 id="time"> <i class="fas fa-clock"></i> Todays, 09:00  </h4> -->
                             </div>
                              
                          </div>
@@ -44,9 +42,9 @@
                 <!-- <p > <i class="fas fa-clouds"></i>More Weather Forcast</p> -->
                
                 <div class="info ">
-                    <p>Temp Range : 26/ 26</p> <hr>
-                    <p>Humdity: 51%</p>  <hr>
-                    <p>Pressure: 1007Hpa</p> <hr>
+                   <p id="temp_range"></p> <hr>
+                    <p id="humidity"></p>  <hr>
+                    <p id="pressure"></p> <hr>
 
                 </div>
                 <div class="back">
@@ -59,5 +57,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
+    
 </body>
 </html>

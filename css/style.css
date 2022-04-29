@@ -16,7 +16,12 @@
 /* h1, h4, p{
 position: absolute;
 } */
-
+#error{
+    position:absolute;
+    top: 40px;
+    left: 35px;
+    color: red;
+}
 .elements{
     position: absolute;
     top: 310px;
@@ -24,7 +29,7 @@ position: absolute;
 }
 .tc{
     position: absolute;
-    top: 50px;
+    top: 68px;
     left: 30px;
     color: white;
 }
@@ -59,9 +64,10 @@ position: absolute;
     font-size: 14px;
 }
 .info{
-    padding: 4px 50px;
+    font-weight: 600;
+    padding: 4px 40px;
     position: absolute;
-    bottom: -46px;
+    bottom: -10px;
      /* background: linear-gradient(360deg, #201717, transparent) !important; */
      color: white;
 }
