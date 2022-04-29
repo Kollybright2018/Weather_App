@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back-con{
+            background-image: url('images/maker.gif') !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+.title{
+    font-weight: 800;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    <title>Weather App || Kollybright</title>
+}        
+.elements, .info{
+        background: linear-gradient(360deg, #201717, transparent) !important;
+        font-weight: 700;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info{
+        background: linear-gradient(360deg, #201717, transparent) !important;
+        font-weight: 700;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    </style>
 </head>
 <body>
-    <div class="container ">
-        <div class="row justify-content-center">
-            <div class="  mt-5 p-5 bg-inf" >
-               <div class="inner-con p-4">
-                <h2 class="text-light app_name">Weather Map</h2>
-                <div class="elements" id="elements">
-                    
-                   
-                <h4 id="cloud"> </h4>
-                   </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mt-3 back-con col-sm-12">
+                    <h1 class="text-center text-light title p-3">Weather Map</h1>
+                    <div class="form-con">
+                         <form action="" id="form_search">
+                        <div class="input-group">
+                            <input type="text" name="search" value="" id="search" placeholder="Search city here" class="form-control ">
+                            <button type="submit" class="btn  btn-light input-group-text" id="search_btn"> <i class=" fas fa-search"></i></button>
+                            <p id="error"> </p>  
+                      </div>
+                    </form>
+                    </div>
+                      <!-- <h5 class="text-center mt-3 text-light" id="time"> <i class="fas fa-clock"></i> Todays, 09:00  </h4> -->
+                        <h5 id="city" class="text-center text-light" > </h5>
 
-                   <div class="form">
-                        <form action="" id="form_search">
-                         <div class="form-group"> 
-                             <input type="text" name="search" value="" id="search" placeholder="Search city here" class="form-control in">
-                             <button type="submit" class="btn input-text" id="search_btn"> <i class="text-info fas fa-search"></i></button>
-                              <p id="error"> </p>
-                             <div class="tc">
-                             <h5 id="city"></h4>
-                             <!-- <h5 id="time"> <i class="fas fa-clock"></i> Todays, 09:00  </h4> -->
-                            </div>
-                             
+                        <div class="elements p-3 text-center text-light" id="elements">
+                         
                          </div>
-                     </form>
-                   </div>
-                    
-                <!-- <h4> Humility</h4>
-                <h4> Pressure</h4> -->
-                <!-- <p > <i class="fas fa-clouds"></i>More Weather Forcast</p> -->
-               
-                <div class="info ">
-                   <p id="temp_range"></p> <hr>
-                    <p id="humidity"></p>  <hr>
-                    <p id="pressure"></p> <hr>
+
+                        <div class="info text-center text-light my-3 p-5">
+                            <h5 id="temp_range"></h5>
+                             <h5 id="humidity"></h5>  
+                             <h5 id="pressure"></h5> 
+                         </div>
+
+                            </div>
+                            
+                         </div>
 
                 </div>
-                <div class="back">
-
-                </div>
-               </div>
-               
             </div>
-        </div>
-    </div>
+    
+
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script>
         let url =
   "  https://api.openweathermap.org/data/2.5/weather?q=iseyin&units=metric&appid=d7c0bb775441adcc1f3dcea6a20bd261";
@@ -101,15 +120,15 @@ async function weather(city) {
       "   " +
       data.data.sys.country +
       " </i>";
-    console.log(data.data.sys.country);
+  
 
     elements =
-      '<span style="padding:0 40px;"><b><i class="fas fa-temperature-high"></i>+' +
+      '<span class="px-4"><b><i class="fas fa-temperature-high"></i>+' +
       data.data.main.temp +
       "</b> </span>" +
-      '  <span><b><i class="fas fa-cloud"></i> ' +
+      '  <span class="px-4"><b><i class="fas fa-cloud"></i> ' +
       data.data.weather[0].main +
-      '</b>   </span> <br><span class="px-5  text-dark "><b>' +
+      '</b>   </span> <br><span class="px-5"><b>' +
       data.data.weather[0].description +
       "</b></span>";
 
@@ -140,6 +159,5 @@ form.addEventListener("submit", (e) => {
 
 
     </script>
-    
 </body>
 </html>
