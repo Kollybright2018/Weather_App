@@ -1,6 +1,6 @@
 
 .back-con{
-    background-image: url('../images/maker.gif') !important;
+    background-image: url('../images/ange.webp') !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,13 +11,14 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }        
 .elements, .info{
-background: linear-gradient(360deg, #201717, transparent) !important;
+/* background: linear-gradient(360deg, #201717, transparent) !important; */
 font-weight: 700;
 font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 20px;
 }
 
 .info{
-background: linear-gradient(360deg, #201717, transparent) !important;
+/* background: linear-gradient(360deg, #201717, transparent) !important; */
 font-weight: 700;
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
